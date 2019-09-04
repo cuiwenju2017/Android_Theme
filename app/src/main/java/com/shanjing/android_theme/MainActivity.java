@@ -19,15 +19,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sw = findViewById(R.id.sw);
-        //取出保存的值（取数据）
+
         sprfMain = getSharedPreferences("counter", Context.MODE_PRIVATE);
+        editorMain = sprfMain.edit();
+
+        //取出保存的值（取数据）
         boolean isChecked = sprfMain.getBoolean("isChecked", false);
-        sw.setChecked(isChecked);
+        sw.setChecked(isChecked);//获取状态并设置当前状态
         if (isChecked) {
             getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         } else {
             getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
+
         //开关
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -35,16 +39,12 @@ public class MainActivity extends AppCompatActivity {
                 if (isChecked) {
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
                     //保存数据
-                    sprfMain = getSharedPreferences("counter", Context.MODE_PRIVATE);
-                    editorMain = sprfMain.edit();
                     editorMain.putBoolean("isChecked", true);
                     editorMain.commit();
 
                 } else {
                     getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                     //保存数据
-                    sprfMain = getSharedPreferences("counter", Context.MODE_PRIVATE);
-                    editorMain = sprfMain.edit();
                     editorMain.putBoolean("isChecked", false);
                     editorMain.commit();
                 }
