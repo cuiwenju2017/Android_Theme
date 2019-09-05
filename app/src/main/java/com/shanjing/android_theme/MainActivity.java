@@ -7,10 +7,12 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.shanjing.android_theme.utils.ButtonUtils;
 
+/**
+ * 入口
+ */
 public class MainActivity extends BaseActivity {
 
     private Switch sw;

@@ -3,7 +3,10 @@
     <color name="colorPrimary">#009688</color>
     <color name="colorPrimaryDark">#ffff8800</color>
     <color name="colorAccent">#009688</color>
+
     <color name="textColorPrimary">#ffff8800</color>
-    <color name="viewBackground">#ff0099cc</color>
+    <color name="viewBackground">#ffffff</color>
     <color name="colorDayNightChange">#ffff8800</color>
+
+    <color name="transparent">#00000000</color>
 </resources>
