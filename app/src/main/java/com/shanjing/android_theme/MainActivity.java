@@ -1,36 +1,32 @@
 package com.shanjing.android_theme;
 
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.shanjing.android_theme.utils.ButtonUtils;
+
+public class MainActivity extends BaseActivity {
 
     private Switch sw;
-    SharedPreferences sprfMain;
-    SharedPreferences.Editor editorMain;
+    private TextView tv, tv2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sw = findViewById(R.id.sw);
-
-        sprfMain = getSharedPreferences("counter", Context.MODE_PRIVATE);
-        editorMain = sprfMain.edit();
+        tv = findViewById(R.id.tv);
+        tv2 = findViewById(R.id.tv2);
 
         //取出保存的值（取数据）
         boolean isChecked = sprfMain.getBoolean("isChecked", false);
         sw.setChecked(isChecked);//获取状态并设置当前状态
-        if (isChecked) {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
 
         //开关
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -50,5 +46,24 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!ButtonUtils.isFastDoubleClick(R.id.tv)) {
+                    startActivity(new Intent(MainActivity.this, TwoActivity.class));
+                }
+            }
+        });
+
+        tv2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!ButtonUtils.isFastDoubleClick(R.id.tv)) {
+                    startActivity(new Intent(MainActivity.this, ThreeActivity.class));
+                }
+            }
+        });
+
     }
 }

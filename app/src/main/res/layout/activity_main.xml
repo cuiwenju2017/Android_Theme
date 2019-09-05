@@ -6,16 +6,28 @@
     android:padding="10dp">
 
     <TextView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/viewBackground"
         android:gravity="center"
-        android:text="Hello World!"
+        android:text="跳转到Activity"
+        android:textColor="@color/textColorPrimary" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/viewBackground"
+        android:gravity="center"
+        android:text="跳转到有Fragment的Activity"
         android:textColor="@color/textColorPrimary" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
