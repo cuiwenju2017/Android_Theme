@@ -1,4 +1,4 @@
-package com.shanjing.android_theme;
+package com.shanjing.android_theme.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.shanjing.android_theme.activity.IssueActivity;
+import com.shanjing.android_theme.R;
 import com.shanjing.android_theme.fragment.HRCartFragment;
 import com.shanjing.android_theme.fragment.HRHomeFragment;
 import com.shanjing.android_theme.fragment.HRMyFragment;

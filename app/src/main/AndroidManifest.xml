@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.IssueActivity"></activity>
-        <activity android:name=".ThreeActivity" />
-        <activity android:name=".TwoActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.ThreeActivity" />
+        <activity android:name=".activity.TwoActivity" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

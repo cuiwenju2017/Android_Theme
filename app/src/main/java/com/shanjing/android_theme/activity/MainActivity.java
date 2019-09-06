@@ -1,6 +1,8 @@
-package com.shanjing.android_theme;
+package com.shanjing.android_theme.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.shanjing.android_theme.R;
 import com.shanjing.android_theme.utils.ButtonUtils;
 
 /**
@@ -25,7 +28,6 @@ public class MainActivity extends BaseActivity {
         sw = findViewById(R.id.sw);
         tv = findViewById(R.id.tv);
         tv2 = findViewById(R.id.tv2);
-
         //取出保存的值（取数据）
         boolean isChecked = sprfMain.getBoolean("isChecked", false);
         sw.setChecked(isChecked);//获取状态并设置当前状态

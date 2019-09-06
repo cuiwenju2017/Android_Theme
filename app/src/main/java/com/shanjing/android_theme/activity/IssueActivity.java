@@ -1,7 +1,7 @@
 package com.shanjing.android_theme.activity;
 
 import android.os.Bundle;
-import com.shanjing.android_theme.BaseActivity;
+
 import com.shanjing.android_theme.R;
 
 /**

@@ -1,6 +1,8 @@
-package com.shanjing.android_theme;
+package com.shanjing.android_theme.activity;
 
 import android.os.Bundle;
+
+import com.shanjing.android_theme.R;
 
 public class TwoActivity extends BaseActivity {
 
